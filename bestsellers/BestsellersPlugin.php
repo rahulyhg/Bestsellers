@@ -4,11 +4,16 @@ namespace Craft;
 /**
  * Bestsellers plugin class
  */
-class Bestsellers extends BasePlugin
+class BestsellersPlugin extends BasePlugin
 {
     public function getName()
     {
         return 'Bestsellers';
+    }
+
+    public function getDescription()
+    {
+        return 'Auto-tag your top selling products.';
     }
 
     public function getVersion()
@@ -31,10 +36,10 @@ class Bestsellers extends BasePlugin
         return true;
     }
 
-    public function registerCpRoutes()
-    {
-        return array(
-            'bestsellers' => array('action' => 'bestsellers/_index')
-        );
-    }
+    // public function registerCpRoutes()
+    // {
+    //     return array(
+    //         'bestsellers' => array('action' => 'bestsellers/index')
+    //     );
+    // }
 }

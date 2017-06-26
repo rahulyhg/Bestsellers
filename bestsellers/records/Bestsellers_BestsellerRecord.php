@@ -10,7 +10,7 @@ class Bestsellers_BestsellerRecord extends BaseRecord
      */
     public function getTableName()
     {
-        return 'bestsellers_bestsellers';
+        return 'bestsellers';
     }
 
     /**

@@ -12,7 +12,7 @@ class BestsellersService extends BaseApplicationComponent
 	 *
 	 * @return array
      */
-    public function getBestSellingProducts($limit = 10)
+    public function getBestSellingProducts($limit)
     {
         $bestsellers = craft()->db->createCommand()
             ->select(array('l.purchasableId', 'p.price', 'count(l.purchasableId) as occurences'))
@@ -24,5 +24,22 @@ class BestsellersService extends BaseApplicationComponent
             ->queryAll();
 
         return $bestsellers;
+    }
+
+    /**
+     * Returns products added in the last 30 days
+     *
+	 * @param int $limit
+	 *
+	 * @return array
+     */
+    public function getNewProducts($limit)
+    {
+        $newProducts = craft()->db->createCommand()
+            ->select('id')
+            ->from('commerce_products')
+            ->where('dateCreated > NOW() - INTERVAL 30 DAY')
+            ->queryAll();
+        return $newProducts;
     }
 }

@@ -6,14 +6,26 @@ namespace Craft;
 class BestsellersVariable
 {
     /**
-     * Returns count
+     * Returns best selling products
      *
-	 * @param int $entryId
+	 * @param int $limit
 	 *
-	 * @return SaleCountModel
+	 * @return array
      */
-    public function getBestSellingProducts()
+    public function getBestSellingProducts($limit = 10)
     {
-        return craft()->bestsellers->getBestSellingProducts();
+        return craft()->bestsellers->getBestSellingProducts($limit);
+    }
+
+    /**
+     * Returns newly added products
+     *
+	 * @param int $limit
+	 *
+	 * @return array
+     */
+    public function getNewProducts($limit = 10)
+    {
+        return craft()->bestsellers->getNewProducts($limit);
     }
 }

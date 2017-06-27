@@ -3,8 +3,41 @@
 
 {% set title = "Bestsellers"|t %}
 
+{% set bestsellers = craft.bestsellers.getBestSellingProducts %}
+
 {% set content %}
 
-
+    <table class="data fullwidth">
+        <thead>
+            <tr>
+                <th>{{ "Product"|t }}</th>
+                <th>{{ "Type"|t }}</th>
+                <th>{{ "Price"|t }}</th>
+                <th>{{ "Sale Count"|t }}</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for bestseller in bestsellers %}
+            {% set variant = craft.commerce.variants.id(bestseller.purchasableId).first() %}
+            <tr>
+                <td>
+                    <a href="{{ variant.product.url }}">
+                        {{ variant.product.title }}
+                    </a>
+                </td>
+                <td>
+                    {{ variant.product.type|capitalize }}
+                </td>
+                <td>
+                    {{ bestseller.price }}
+                </td>
+                <td>
+                    {{ bestseller.occurences }}
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
 
 {% endset %}
+

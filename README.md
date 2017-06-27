@@ -1,10 +1,10 @@
 # Bestsellers Plugin for Craft CMS (Work in Progress)
 
-The plugin adds a `bestsellers` table to the database.
+The plugin makes a `Bestsellers` template variable available for displaying your best selling products.
 
 ## Installation
 
-1. Upload the `bestsellers` directory to `craft/plugins/` on your server.
+1. Upload the `Bestsellers` directory to `craft/plugins/` on your server.
 2. Enable the plugin under Craft Admin > Settings > Plugins
 
 ## Coding Standards

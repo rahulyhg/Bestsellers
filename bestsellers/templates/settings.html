@@ -1,0 +1,8 @@
+{% import "_includes/forms" as forms %}
+
+{{ forms.lightswitchField({
+	label: "Show count on product index pages"|t,
+	instructions: "Will add a new column for the sale count on the product index pages"|t,
+	name: 'showCountOnProductIndex',
+	on: settings.showCountOnProductIndex,
+}) }}

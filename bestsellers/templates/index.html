@@ -11,6 +11,7 @@
         <thead>
             <tr>
                 <th>{{ "Product"|t }}</th>
+                <th>{{ "Variant"|t }}</th>
                 <th>{{ "Type"|t }}</th>
                 <th>{{ "Price"|t }}</th>
                 <th>{{ "Sale Count"|t }}</th>
@@ -24,6 +25,9 @@
                     <a href="{{ variant.product.url }}">
                         {{ variant.product.title }}
                     </a>
+                </td>
+                <td>
+                    {{ variant.title }}
                 </td>
                 <td>
                     {{ variant.product.type|capitalize }}

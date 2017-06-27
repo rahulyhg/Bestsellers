@@ -1,11 +1,14 @@
-# Bestsellers Plugin for Craft CMS (Work in Progress)
+# Bestsellers Plugin for Craft CMS
 
-The plugin makes a `Bestsellers` template variable available for displaying your best selling products.
+Display your best selling products.
 
 ## Installation
 
-1. Upload the `Bestsellers` directory to `craft/plugins/` on your server.
+1. Upload the `Bestsellers` directory to `craft/plugins/` on your server
 2. Enable the plugin under Craft Admin > Settings > Plugins
+3. See your `Bestsellers` in the Control Panel
+4. Display your `Bestsellers` in your templates using `craft.bestsellers.getBestSellingProducts`
+5. Pass an integer to get the required number of results returned: `craft.bestsellers.getBestSellingProducts(25)`
 
 ## Coding Standards
 

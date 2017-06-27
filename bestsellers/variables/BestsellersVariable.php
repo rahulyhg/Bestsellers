@@ -24,8 +24,8 @@ class BestsellersVariable
 	 *
 	 * @return array
      */
-    public function getNewProducts($limit = 10)
+    public function getNewProducts($limit = 10, $noOfDays = 30)
     {
-        return craft()->bestsellers->getNewProducts($limit);
+        return craft()->bestsellers->getNewProducts($limit, $noOfDays);
     }
 }

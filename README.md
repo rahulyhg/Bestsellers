@@ -7,8 +7,19 @@ Display your best selling products.
 1. Upload the `Bestsellers` directory to `craft/plugins/` on your server
 2. Enable the plugin under Craft Admin > Settings > Plugins
 3. See your `Bestsellers` in the Control Panel
-4. Display your `Bestsellers` in your templates using `craft.bestsellers.getBestSellingProducts`
-5. Pass an integer to get the required number of results returned: `craft.bestsellers.getBestSellingProducts(25)`
+
+## Methods
+
+### getBestSellingProducts
+
+- Display your `Bestsellers` in your templates using `craft.bestsellers.getBestSellingProducts`
+- Pass an integer to get the required number of results returned: `craft.bestsellers.getBestSellingProducts(25)` (Default = 10)
+
+### getNewProducts
+
+- Display all products added to Craft Commerce in the given number of days in your templates using `craft.bestsellers.getNewProducts`
+- Pass an integer as the first argument to set the number of results returned: `craft.bestsellers.getBestSellingProducts(25)` (Default = 10)
+- Pass an integer as the second argument to return products added in `n` number of days: `craft.bestsellers.getBestSellingProducts(25, 30)` (Default = 30)
 
 ## Coding Standards
 

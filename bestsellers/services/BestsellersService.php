@@ -33,12 +33,12 @@ class BestsellersService extends BaseApplicationComponent
 	 *
 	 * @return array
      */
-    public function getNewProducts($limit)
+    public function getNewProducts($limit, $noOfDays)
     {
         $newProducts = craft()->db->createCommand()
             ->select('id')
             ->from('commerce_products')
-            ->where('dateCreated > NOW() - INTERVAL 30 DAY')
+            ->where('dateCreated > NOW() - INTERVAL :noOfDays DAY', array('noOfDays' => $noOfDays))
             ->queryAll();
         return $newProducts;
     }

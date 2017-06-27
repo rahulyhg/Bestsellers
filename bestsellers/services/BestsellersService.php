@@ -12,7 +12,7 @@ class BestsellersService extends BaseApplicationComponent
 	 *
 	 * @return array
      */
-    public function getBestSellingProducts($limit = 5)
+    public function getBestSellingProducts($limit = 10)
     {
         $bestsellers = craft()->db->createCommand()
             ->select(array('l.purchasableId', 'p.price', 'count(l.purchasableId) as occurences'))

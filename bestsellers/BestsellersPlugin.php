@@ -47,7 +47,7 @@ class BestsellersPlugin extends BasePlugin
 
     public function hasCpSection()
     {
-        return true;
+        return false;
     }
 
     // public function registerCpRoutes()
